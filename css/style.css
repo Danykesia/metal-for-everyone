@@ -11,4 +11,62 @@
   --card-dark: #040d18;
   --spotify-color: rgba(28, 208, 94, 0.54);
   --social-icons: #375b8b;
+  --header-background: linear-gradient(180deg, rgb(1, 18, 49) 0%, #010e1e 100%);
+  --text-size-xxs: 0.8rem;
+  --text-size-xs: 1rem;
+  --text-size-s: 1.2rem;
+  --text-size-m: 1.4rem;
+  --text-size-l: 3rem;
+  --text-size-xl: 4rem;
+  --text-size-xxl: 4.5rem;
+  --titillium: "Titillium Web", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--titillium);
+}
+
+header {
+  background: var(--header-background);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem 0 2.5rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: var(--text-size-m);
+  margin: 0 2rem;
+  padding: 0 0.2rem;
+  position: relative;
+}
+
+nav a.active {
+  border-bottom: 3px solid var(--secondary-color);
+  padding-bottom: 2px;
+}
+
+nav a:after {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-color);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.2s;
+}
+
+nav a:not(.active):hover::after {
+  width: 100%;
 }
