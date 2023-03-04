@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #01060c;
+  --secondary-color: #9588ff;
+  --accent-color: #d2b93e;
+  --text-light: #fdfeff;
+  --text-dark: #3d3d3d;
+  --text-gray: #9c9c9c;
+  --text-highlight: #2a1c99;
+  --text-link: #655507;
+  --card-gray: #e4e4e4;
+  --card-dark: #040d18;
+  --spotify-color: rgba(28, 208, 94, 0.54);
+  --social-icons: #375b8b;
+}
