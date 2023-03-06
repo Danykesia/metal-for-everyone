@@ -98,15 +98,16 @@ nav a:not(.active):hover::after {
 }
 
 .banner {
-  background-image: url(../img/metallica.jpg);
+  background-image: url(../img/metallica2.jpg);
   background-color: var(--primary-color);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  height: 75vh;
+  background-position: center top;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   position: relative;
+  background-attachment: fixed;
 }
 
 .banner::after {
