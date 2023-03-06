@@ -9,6 +9,6 @@
 - HTML
 - CSS
   - Menu hover efects
-  - Paralax
+  - Parallax
   - CSS Grid
   - FlexBox
