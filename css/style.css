@@ -1,7 +1,7 @@
 :root {
   --primary-color: #01060c;
   --secondary-color: #9588ff;
-  --accent-color: #d2b93e;
+  --accent-color: #f0cb14;
   --text-light: #fdfeff;
   --text-dark: #3d3d3d;
   --text-gray: #9c9c9c;
@@ -56,7 +56,7 @@ body {
 }
 
 .button-bg:hover {
-  background-color: hsl(50, 88%, 51%);
+  background-color: #ffe044;
 }
 
 header {
@@ -285,8 +285,7 @@ nav a:not(.active):hover::after {
   line-height: calc(var(--text-size-xs) * 1.4);
 }
 
-.latest-news-card-content a,
-.top-news-card a {
+.button-link {
   color: var(--text-link);
   font-weight: 600;
   text-transform: uppercase;
@@ -378,4 +377,33 @@ nav a:not(.active):hover::after {
   padding: 10px 30px;
   font-size: var(--text-size-xxs);
   letter-spacing: 1px;
+}
+
+footer {
+  background-color: var(--card-dark);
+  background-image: url(../img/footer-bg.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 0;
+  flex-direction: column;
+}
+
+footer img {
+  padding: 0 0.4rem;
+  transition: all 0.3s;
+}
+
+footer img:hover {
+  transform: translateY(-4px);
+}
+
+footer img svg:hover path {
+  fill: red;
+}
+
+footer p {
+  color: var(--text-gray);
+  font-size: var(--text-size-xs);
+  margin-top: 0.5rem;
 }
