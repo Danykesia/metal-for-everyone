@@ -56,7 +56,7 @@ body {
 }
 
 .button-bg:hover {
-  background-color: #e7cf53;
+  background-color: hsl(54, 88%, 51%);
 }
 
 header {
