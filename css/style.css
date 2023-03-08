@@ -56,7 +56,7 @@ body {
 }
 
 .button-bg:hover {
-  background-color: hsl(54, 88%, 51%);
+  background-color: #f0da14;
 }
 
 header {
@@ -362,10 +362,11 @@ nav a:not(.active):hover::after {
 
 .playlists .container {
   align-items: center;
+  gap: 20px;
 }
 
 .playlists .info {
-  width: 50%;
+  flex-basis: 50%;
   color: var(--text-light);
 }
 
@@ -377,6 +378,11 @@ nav a:not(.active):hover::after {
   padding: 10px 30px;
   font-size: var(--text-size-xxs);
   letter-spacing: 1px;
+}
+
+.spotify {
+  flex-basis: 20%;
+  text-align: center;
 }
 
 footer {
