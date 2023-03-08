@@ -56,7 +56,7 @@ body {
 }
 
 .button-bg:hover {
-  background-color: #ffe044;
+  background-color: #e7cf53;
 }
 
 header {
@@ -180,7 +180,7 @@ nav a:not(.active):hover::after {
   height: 100%;
 }
 
-.album-content {
+.album-info {
   padding: 1.2rem;
   display: grid;
   gap: 14px;
@@ -188,12 +188,12 @@ nav a:not(.active):hover::after {
   align-items: center;
 }
 
-.album-content button {
+.album-info button {
   font-size: var(--text-size-xxs);
   height: 32px;
 }
 
-.album-content p {
+.album-info p {
   color: var(--text-light);
   font-family: var(--roboto);
   grid-column: 1/-1;
@@ -243,7 +243,7 @@ nav a:not(.active):hover::after {
   height: 100%;
 }
 
-.latest-news-card-content {
+.latest-news-card-info {
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -253,7 +253,7 @@ nav a:not(.active):hover::after {
   justify-content: space-evenly;
 }
 
-.latest-news-card-content p {
+.latest-news-card-info p {
   grid-column: 1/-1;
 }
 
@@ -364,7 +364,7 @@ nav a:not(.active):hover::after {
   align-items: center;
 }
 
-.playlists .content {
+.playlists .info {
   width: 50%;
   color: var(--text-light);
 }
