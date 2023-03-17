@@ -17,7 +17,7 @@
   --text-size-s: 1.2rem;
   --text-size-m: 1.3rem;
   --text-size-l: 1.48rem;
-  --text-size-xl: 2.1rem;
+  --text-size-xl: 1.9rem;
   --text-size-xxl: 2.9rem;
   --titillium: "Titillium Web", sans-serif;
   --roboto: "Roboto", sans-serif;
@@ -149,7 +149,7 @@ nav a:not(.active):hover::after {
 
 .albums-released-wrapper {
   display: grid;
-  grid-template-columns: 0.1fr 0.6fr 2fr 2fr 0.1fr;
+  grid-template-columns: 0.1fr 0.5fr 1.5fr 1.5fr 0.1fr;
   background-color: var(--primary-color);
   border-radius: 8px;
   align-items: center;
@@ -173,7 +173,7 @@ nav a:not(.active):hover::after {
   background-color: var(--card-dark);
   border-radius: 8px;
   margin: 1rem 0;
-  height: 180px;
+  height: 178px;
 }
 
 .albums-released-card img {
