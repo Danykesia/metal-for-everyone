@@ -42,7 +42,7 @@ body {
   margin: 0 auto;
   display: flex;
   flex: 1;
-  padding: 0 5rem;
+  padding: 0 80px;
 }
 
 .button-bg {
@@ -63,17 +63,17 @@ header {
   background: var(--header-background);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 16px;
   align-items: center;
-  padding: 1.5rem 0 2.5rem 0;
+  padding: 32px 0 40px 0;
 }
 
 nav a {
   text-decoration: none;
   color: var(--text-light);
   font-size: var(--text-size-m);
-  margin: 0 2rem;
-  padding: 0 0.2rem;
+  margin: 0 24px;
+  padding: 0 3.2px;
   position: relative;
 }
 
@@ -143,7 +143,7 @@ nav a:not(.active):hover::after {
   font-size: var(--text-size-m);
   line-height: calc(var(--text-size-m) * 1.2);
   font-family: var(--roboto);
-  margin-top: 1.5rem;
+  margin-top: 24px;
   font-weight: 400;
 }
 
@@ -153,8 +153,8 @@ nav a:not(.active):hover::after {
   background-color: var(--primary-color);
   border-radius: 8px;
   align-items: center;
-  padding: 0 2.5rem;
-  margin-top: -7rem;
+  padding: 0 40px;
+  margin-top: -122px;
   z-index: 2;
   gap: 10px;
 }
@@ -172,7 +172,7 @@ nav a:not(.active):hover::after {
   grid-template-columns: 0.6fr 1fr;
   background-color: var(--card-dark);
   border-radius: 8px;
-  margin: 1rem 0;
+  margin: 16px 0;
   height: 178px;
 }
 
@@ -182,7 +182,7 @@ nav a:not(.active):hover::after {
 }
 
 .album-info {
-  padding: 1.2rem;
+  padding: 19.2px;
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
@@ -216,11 +216,11 @@ nav a:not(.active):hover::after {
 .texture-background {
   background-image: url(../img/texture-bg.jpg);
   background-color: var(--card-dark);
-  padding-bottom: 4.5rem;
+  padding-bottom: 72px;
 }
 
 .latest-news-grid {
-  margin-top: 1.6rem;
+  margin-top: 25.6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -230,7 +230,7 @@ nav a:not(.active):hover::after {
 .top-news h3 {
   color: var(--accent-color);
   font-size: var(--text-size-xl);
-  margin-top: 3.3rem;
+  margin-top: 52.8px;
   font-weight: 600;
 }
 
@@ -245,7 +245,7 @@ nav a:not(.active):hover::after {
 }
 
 .latest-news-card-info {
-  padding: 1.5rem;
+  padding: 24px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
@@ -319,13 +319,13 @@ nav a:not(.active):hover::after {
 
 .top-news {
   background-color: var(--primary-color);
-  padding-bottom: 4.5rem;
+  padding-bottom: 72px;
 }
 
 .top-news-content {
   display: flex;
   flex-direction: row;
-  margin-top: 1.6rem;
+  margin-top: 25.6px;
   gap: 20px;
 }
 
@@ -347,8 +347,8 @@ nav a:not(.active):hover::after {
   position: relative;
   background-color: var(--card-gray);
   width: 90%;
-  margin: -2rem auto 0;
-  padding: 1.5rem;
+  margin: -32px auto 0;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -384,7 +384,7 @@ nav a:not(.active):hover::after {
 .playlists button {
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 1.8rem;
+  margin-top: 28.8px;
   height: 40px;
   padding: 10px 30px;
   font-size: var(--text-size-xxs);
@@ -402,12 +402,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.6rem 0;
+  padding: 25.6px 0;
   flex-direction: column;
 }
 
 footer img {
-  padding: 0 0.4rem;
+  padding: 0 6.4px;
   transition: all 0.3s;
 }
 
@@ -418,5 +418,5 @@ footer img:hover {
 footer p {
   color: var(--text-gray);
   font-size: var(--text-size-xs);
-  margin-top: 0.5rem;
+  margin-top: 8px;
 }
