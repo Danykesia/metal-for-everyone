@@ -6,7 +6,7 @@
   --text-dark: #3d3d3d;
   --text-gray: #9c9c9c;
   --text-highlight: #2a1c99;
-  --text-link: #897409;
+  --text-link: #a78b00;
   --card-gray: #e4e4e4;
   --card-dark: #040d18;
   --spotify-color: rgba(28, 208, 94, 0.54);
@@ -16,7 +16,7 @@
   --text-size-xs: 1.06rem;
   --text-size-s: 1.2rem;
   --text-size-m: 1.3rem;
-  --text-size-l: 1.58rem;
+  --text-size-l: 1.48rem;
   --text-size-xl: 2.1rem;
   --text-size-xxl: 2.9rem;
   --titillium: "Titillium Web", sans-serif;
@@ -161,8 +161,8 @@ nav a:not(.active):hover::after {
 
 .albums-released-wrapper h4 {
   color: var(--secondary-color);
-  font-size: var(--text-size-l);
-  line-height: calc(var(--text-size-l) * 1.2);
+  font-size: var(--text-size-xl);
+  line-height: calc(var(--text-size-xl) * 1.2);
   font-weight: 600;
   width: 80%;
 }
@@ -173,6 +173,7 @@ nav a:not(.active):hover::after {
   background-color: var(--card-dark);
   border-radius: 8px;
   margin: 1rem 0;
+  height: 180px;
 }
 
 .albums-released-card img {
@@ -183,7 +184,7 @@ nav a:not(.active):hover::after {
 .album-info {
   padding: 1.2rem;
   display: grid;
-  gap: 14px;
+  gap: 12px;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
@@ -235,7 +236,7 @@ nav a:not(.active):hover::after {
 
 .latest-news-card {
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  grid-template-columns: 0.84fr 1fr;
 }
 
 .latest-news-card img {
@@ -247,10 +248,9 @@ nav a:not(.active):hover::after {
   padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  gap: 10px;
+  gap: 8px;
   background-color: var(--card-gray);
-  justify-content: space-evenly;
+  align-content: space-evenly;
 }
 
 .latest-news-card-info p {
@@ -259,8 +259,8 @@ nav a:not(.active):hover::after {
 
 .latest-news-card .date,
 .latest-news-card .title,
-.top-news-card .date,
-.top-news-card .title {
+.top-news-info .date,
+.top-news-info .title {
   color: var(--text-highlight);
 }
 
@@ -270,14 +270,14 @@ nav a:not(.active):hover::after {
 }
 
 .latest-news-card .title,
-.top-news-card .title {
+.top-news-info .title {
   font-size: var(--text-size-l);
   font-weight: 600;
-  line-height: calc(var(--text-size-l) * 1.2);
+  line-height: calc(var(--text-size-l) * 1.4);
 }
 
 .latest-news-card .text,
-.top-news-card .text {
+.top-news-info .text {
   color: var(--text-dark);
   font-size: var(--text-size-xs);
   font-family: var(--roboto);
@@ -296,7 +296,7 @@ nav a:not(.active):hover::after {
 }
 
 .latest-news-card a:after,
-.top-news-card a::after {
+.top-news-info a::after {
   content: "";
   position: absolute;
   background-color: var(--text-highlight);
@@ -308,12 +308,12 @@ nav a:not(.active):hover::after {
 }
 
 .latest-news-card a:hover,
-.top-news-card a:hover {
+.top-news-info a:hover {
   color: var(--text-highlight);
 }
 
 .latest-news-card a:hover::after,
-.top-news-card a:hover::after {
+.top-news-info a:hover::after {
   width: 100%;
 }
 
@@ -322,18 +322,28 @@ nav a:not(.active):hover::after {
   padding-bottom: 4.5rem;
 }
 
-.top-news-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.top-news-content {
+  display: flex;
+  flex-direction: row;
   margin-top: 1.6rem;
   gap: 20px;
 }
 
-.top-news-wrapper img {
-  width: 100%;
+.top-news-wrapper {
+  display: flex;
+  width: 32.222%;
 }
 
 .top-news-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-news-card img {
+  width: 100%;
+}
+
+.top-news-info {
   position: relative;
   background-color: var(--card-gray);
   width: 90%;
@@ -342,6 +352,7 @@ nav a:not(.active):hover::after {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  flex: 1 1 auto;
 }
 
 .playlists {
@@ -402,10 +413,6 @@ footer img {
 
 footer img:hover {
   transform: translateY(-4px);
-}
-
-footer img svg:hover path {
-  fill: red;
 }
 
 footer p {
