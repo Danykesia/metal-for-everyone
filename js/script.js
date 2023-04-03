@@ -1,23 +1,44 @@
-const slider = document.querySelector('.slider');
+// Infinity banner carousel
+const bannerSlider = document.querySelector('.banner-slider');
+const bannerCarousel = document.querySelector('.banner-carousel')
 
-const leftArrow = document.querySelector('.left');
-const rightArrow = document.querySelector('.right');
+const bannerArrowLeft = document.querySelector('#banner-arrow-left');
+const bannerArrowRight = document.querySelector('#banner-arrow-right');
 
-let sectionIndex = 0;
+let direction = -1;
 
-leftArrow.addEventListener('click', () => {
-  sectionIndex = (sectionIndex > 0) ? sectionIndex - 1 : 0;
-  slider.style.transform = 'translate(' + sectionIndex * -25 + '%)';
-  const teste = slider.style.transform;
+bannerArrowLeft.addEventListener('click', () => {
+  if (direction === -1) {
+    bannerSlider.appendChild(bannerSlider.firstElementChild);
+    direction = 1;
+  };
 
-  console.log(teste)
-  console.log(sectionIndex)
+  bannerCarousel.style.justifyContent = 'flex-end'
+  console.log(direction)
+  bannerSlider.style.transform = 'translate(25%)';
 });
-rightArrow.addEventListener('click', () => {
-  sectionIndex = (sectionIndex < 3) ? sectionIndex + 1 : 3
-  slider.style.transform = 'translate(' + sectionIndex * -25 + '%)';
-  const teste = slider.style.transform;
 
-  console.log(teste)
-  console.log(sectionIndex)
+bannerArrowRight.addEventListener('click', () => {
+  if (direction === 1) {
+    bannerSlider.prepend(bannerSlider.lastElementChild);
+    direction = -1;
+  }
+  bannerCarousel.style.justifyContent = 'flex-start'
+  console.log(direction)
+  bannerSlider.style.transform = 'translate(-25%)';
+});
+
+bannerSlider.addEventListener('transitionend', () => {
+  if (direction === -1) {
+    bannerSlider.appendChild(bannerSlider.firstElementChild);
+  } else if (direction === 1) {
+    bannerSlider.prepend(bannerSlider.lastElementChild);
+  }
+
+  bannerSlider.style.transition = 'none';
+  bannerSlider.style.transform = 'translate(0)';
+
+  setTimeout(() => {
+    bannerSlider.style.transition = 'all .5s';
+  });
 });
