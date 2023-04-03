@@ -9,6 +9,9 @@
 - HTML
 - CSS
   - Menu hover efects
-  - Parallax
   - CSS Grid
   - FlexBox
+- JS
+  - document.querySelector()
+  - addEventListener()
+  - setTimeOut()
