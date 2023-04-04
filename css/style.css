@@ -169,10 +169,12 @@ nav a:not(.active):hover::after {
 
 .arrow.left {
   left: 10px;
+  z-index: 1;
 }
 
 .arrow.right {
   right: 10px;
+  z-index: 1;
 }
 
 .banner-controls i {
@@ -217,44 +219,25 @@ nav a:not(.active):hover::after {
   font-weight: 400;
 }
 
-.albums-released-carousel {
-  height: 20vh;
-  overflow: hidden;
-  position: relative;
+.albums-controls .arrow.left,
+.albums-controls .arrow.right {
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: 0.1;
 }
 
-.albums-released-wrapper {
-  display: grid;
-  grid-template-columns: 0.1fr 0.5fr 1.5fr 1.5fr 0.1fr;
-  background-color: var(--primary-color);
-  border-radius: 8px;
-  align-items: center;
-  padding: 0 40px;
-  margin-top: -122px;
-  z-index: 2;
-  gap: 10px;
+.albums-controls .arrow.left:hover,
+.albums-controls .arrow.right:hover {
+  opacity: 1;
 }
 
-.albums-released-wrapper h4 {
+.albums-carousel h4 {
   color: var(--secondary-color);
   font-size: var(--text-size-xl);
   line-height: calc(var(--text-size-xl) * 1.2);
   font-weight: 600;
   width: 80%;
-}
-
-.albums-released-card {
-  display: grid;
-  grid-template-columns: 0.36fr 1fr;
-  background-color: var(--card-dark);
-  border-radius: 8px;
-  margin: 16px 0;
-  height: 178px;
-}
-
-.albums-released-card img {
-  max-width: 100%;
-  height: 100%;
+  margin-right: 20px;
 }
 
 .album-info {
@@ -263,6 +246,7 @@ nav a:not(.active):hover::after {
   gap: 12px;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  align-content: center;
 }
 
 .album-info button {
@@ -495,4 +479,51 @@ footer p {
   color: var(--text-gray);
   font-size: var(--text-size-xs);
   margin-top: 8px;
+}
+
+.albums {
+  position: relative;
+  align-items: center;
+  scroll-behavior: smooth;
+  margin-top: -90px;
+}
+
+.albums-card-content {
+  display: grid;
+  grid-template-columns: 0.36fr 1fr;
+  background-color: var(--card-dark);
+  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 480px;
+}
+
+.albums-card-content img {
+  width: 172px;
+  border-radius: 8px 0 0 8px;
+}
+
+.albums-carousel {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding: 20px 30px;
+  gap: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+
+.albums i {
+  cursor: pointer;
+  color: #c6c6c6;
+  opacity: .5;
+  font-size: 30px;
+  transition: all .5s;
+}
+
+.albums i:hover {
+  opacity: 1;
 }
