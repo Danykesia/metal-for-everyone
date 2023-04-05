@@ -3,10 +3,10 @@
 :root {
   --primary-color: #01060c;
   --secondary-color: #9588ff;
-  --accent-color: #f0cb14;
+  --accent-color: #e0be12;
   --text-light: #fdfeff;
   --text-dark: #3d3d3d;
-  --text-gray: #9c9c9c;
+  --text-gray: #bdbdbd;
   --text-highlight: #2a1c99;
   --text-link: #a78b00;
   --card-gray: #e4e4e4;
@@ -15,7 +15,7 @@
   --social-icons: #375b8b;
   --header-background: linear-gradient(180deg, rgb(6, 14, 29) 0%, #010913 100%);
   --text-size-xxs: 0.9rem;
-  --text-size-xs: 1.06rem;
+  --text-size-xs: 1rem;
   --text-size-s: 1.2rem;
   --text-size-m: 1.3rem;
   --text-size-l: 1.48rem;
@@ -99,6 +99,13 @@ nav a:not(.active):hover::after {
   width: 100%;
 }
 
+.texture-background {
+  background-image: url(../img/texture-bg.jpg);
+  background-color: var(--card-dark);
+  padding-bottom: 72px;
+}
+
+/* Banner */
 .banner-carousel {
   width: 100%;
   height: 100%;
@@ -219,15 +226,51 @@ nav a:not(.active):hover::after {
   font-weight: 400;
 }
 
-.albums-controls .arrow.left,
-.albums-controls .arrow.right {
-  transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, black 200%);
-  opacity: 0.1;
+/* Albums released */
+.albums {
+  position: relative;
+  align-items: center;
+  scroll-behavior: smooth;
+  margin-top: -90px;
 }
 
-.albums-controls .arrow.left:hover,
-.albums-controls .arrow.right:hover {
+.albums-card-content {
+  display: grid;
+  grid-template-columns: 0.36fr 1fr;
+  background-color: var(--card-dark);
+  border-radius: 8px;
+  flex: 0 0 auto;
+  width: 480px;
+}
+
+.albums-card-content img {
+  width: 172px;
+  border-radius: 8px 0 0 8px;
+}
+
+.albums-carousel {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding: 20px 30px;
+  gap: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+
+.albums i {
+  cursor: pointer;
+  color: #c6c6c6;
+  opacity: 0.5;
+  font-size: 30px;
+  transition: all 0.5s;
+}
+
+.albums i:hover {
   opacity: 1;
 }
 
@@ -240,7 +283,7 @@ nav a:not(.active):hover::after {
   margin-right: 20px;
 }
 
-.album-info {
+.albums-info {
   padding: 19.2px;
   display: grid;
   gap: 12px;
@@ -249,22 +292,22 @@ nav a:not(.active):hover::after {
   align-content: center;
 }
 
-.album-info button {
+.albums-info button {
   font-size: var(--text-size-xxs);
   height: 32px;
 }
 
-.album-info p {
+.albums-info p {
   color: var(--text-light);
   font-family: var(--roboto);
   grid-column: 1/-1;
 }
 
-.album-title {
+.albums-title {
   font-size: var(--text-size-s);
 }
 
-.album-tracklist {
+.albums-tracklist {
   font-size: var(--text-size-xxs);
   line-height: calc(var(--text-size-xxs) * 1.3);
 }
@@ -273,12 +316,7 @@ nav a:not(.active):hover::after {
   color: var(--accent-color);
 }
 
-.texture-background {
-  background-image: url(../img/texture-bg.jpg);
-  background-color: var(--card-dark);
-  padding-bottom: 72px;
-}
-
+/* Latest news */
 .latest-news-grid {
   margin-top: 25.6px;
   display: grid;
@@ -304,16 +342,17 @@ nav a:not(.active):hover::after {
   height: 100%;
 }
 
-.latest-news-card-info {
-  padding: 24px;
+.latest-news-card-content {
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  background-color: var(--card-gray);
-  align-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--primary-color);
+  justify-content: space-evenly;
 }
 
-.latest-news-card-info p {
+.latest-news-card-content p {
   grid-column: 1/-1;
 }
 
@@ -321,7 +360,7 @@ nav a:not(.active):hover::after {
 .latest-news-card .title,
 .top-news-info .date,
 .top-news-info .title {
-  color: var(--text-highlight);
+  color: var(--text-light);
 }
 
 .latest-news-card .date,
@@ -331,22 +370,22 @@ nav a:not(.active):hover::after {
 
 .latest-news-card .title,
 .top-news-info .title {
-  font-size: var(--text-size-l);
+  font-size: var(--text-size-m);
   font-weight: 600;
-  line-height: calc(var(--text-size-l) * 1.4);
+  line-height: calc(var(--text-size-m) * 1.4);
 }
 
 .latest-news-card .text,
 .top-news-info .text {
-  color: var(--text-dark);
+  color: var(--text-gray);
   font-size: var(--text-size-xs);
   font-family: var(--roboto);
-  font-weight: regular;
-  line-height: calc(var(--text-size-xs) * 1.4);
+  font-weight: 400;
+  line-height: calc(var(--text-size-xs) * 1.5);
 }
 
 .button-link {
-  color: var(--text-link);
+  color: var(--secondary-color);
   font-weight: 600;
   text-transform: uppercase;
   font-size: var(--text-size-xxs);
@@ -359,7 +398,7 @@ nav a:not(.active):hover::after {
 .top-news-info a::after {
   content: "";
   position: absolute;
-  background-color: var(--text-highlight);
+  background-color: var(--accent-color);
   height: 3px;
   width: 0;
   left: 0;
@@ -369,7 +408,7 @@ nav a:not(.active):hover::after {
 
 .latest-news-card a:hover,
 .top-news-info a:hover {
-  color: var(--text-highlight);
+  color: var(--accent-color);
 }
 
 .latest-news-card a:hover::after,
@@ -377,6 +416,7 @@ nav a:not(.active):hover::after {
   width: 100%;
 }
 
+/* Top news */
 .top-news {
   background-color: var(--primary-color);
   padding-bottom: 72px;
@@ -405,7 +445,7 @@ nav a:not(.active):hover::after {
 
 .top-news-info {
   position: relative;
-  background-color: var(--card-gray);
+  background-color: var(--card-dark);
   width: 90%;
   margin: -32px auto 0;
   padding: 24px;
@@ -415,6 +455,7 @@ nav a:not(.active):hover::after {
   flex: 1 1 auto;
 }
 
+/* Playlists */
 .playlists {
   display: flex;
   align-items: center;
@@ -456,6 +497,7 @@ nav a:not(.active):hover::after {
   text-align: center;
 }
 
+/* Footer */
 footer {
   background-color: var(--card-dark);
   background-image: url(../img/footer-bg.jpg);
@@ -479,51 +521,4 @@ footer p {
   color: var(--text-gray);
   font-size: var(--text-size-xs);
   margin-top: 8px;
-}
-
-.albums {
-  position: relative;
-  align-items: center;
-  scroll-behavior: smooth;
-  margin-top: -90px;
-}
-
-.albums-card-content {
-  display: grid;
-  grid-template-columns: 0.36fr 1fr;
-  background-color: var(--card-dark);
-  border-radius: 8px;
-  flex: 0 0 auto;
-  width: 480px;
-}
-
-.albums-card-content img {
-  width: 172px;
-  border-radius: 8px 0 0 8px;
-}
-
-.albums-carousel {
-  background-color: var(--primary-color);
-  border-radius: 8px;
-  padding: 20px 30px;
-  gap: 15px;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-  scroll-behavior: smooth;
-  align-items: center;
-}
-
-.albums i {
-  cursor: pointer;
-  color: #c6c6c6;
-  opacity: .5;
-  font-size: 30px;
-  transition: all .5s;
-}
-
-.albums i:hover {
-  opacity: 1;
 }
