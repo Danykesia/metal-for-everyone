@@ -1,3 +1,10 @@
+// Scroll navbar
+window.addEventListener("scroll", () => {
+  const header = document.querySelector('header');
+
+  header.classList.toggle('sticky', window.scrollY > 60);
+})
+
 // Infinity banner carousel
 const bannerSlider = document.querySelector('.banner-slider');
 const bannerCarousel = document.querySelector('.banner-carousel')
