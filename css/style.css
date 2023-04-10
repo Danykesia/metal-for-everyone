@@ -59,7 +59,7 @@ body {
 
 .button-bg:hover {
   background-color: #f0da14;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--accent-color);;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--accent-color);
   transform: translateY(-0.25em);
 }
 
@@ -286,7 +286,7 @@ nav a:not(.active):hover::after {
   opacity: 1;
 }
 
-.albums-carousel h4 {
+.albums-carousel h2 {
   color: var(--secondary-color);
   font-size: var(--text-size-xl);
   line-height: calc(var(--text-size-xl) * 1.2);
