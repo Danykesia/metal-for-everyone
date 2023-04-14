@@ -1,0 +1,67 @@
+.playlists {
+  display: flex;
+  align-items: center;
+  background-image: url(../img/playlist-bg.jpg);
+  background-color: var(--text-highlight);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.playlists h2 {
+  font-size: var(--text-size-xl);
+  line-height: calc(var(--text-size-xl) * 1.4);
+  font-weight: 600;
+}
+
+.playlists .container {
+  align-items: center;
+  gap: 20px;
+}
+
+.playlists .info {
+  flex-basis: 50%;
+  color: var(--text-light);
+}
+
+.playlists button {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 28.8px;
+  height: 40px;
+  padding: 10px 30px;
+  font-size: var(--text-size-xxs);
+  letter-spacing: 1px;
+}
+
+.spotify {
+  flex-basis: 20%;
+  text-align: center;
+}
+
+@media(max-width: 1200px) {
+  .spotify {
+    flex-basis: 50%;
+  }
+}
+
+@media(max-width: 600px) {
+  .playlists {
+    height: auto;
+  }
+
+  .playlists .info {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .playlists .container {
+    flex-direction: column;
+    padding: 80px 20px;
+  }
+
+  .playlists h2 {
+    font-size: var(--text-size-xl);
+    line-height: calc(var(--text-size-xl) * 1.4);
+  }
+}

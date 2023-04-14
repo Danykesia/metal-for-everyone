@@ -1,0 +1,151 @@
+.banner-carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-slider {
+  display: flex;
+  height: 100%;
+  width: 400%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+
+.banner-slider section {
+  flex-basis: 25%;
+  flex-shrink: 0;
+  flex: 1;
+  width: 25%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.banner-slider .slide1 {
+  background-image: url(../img/metallica.jpg);
+}
+
+.banner-slider .slide2 {
+  background-image: url(../img/kiss.jpg);
+}
+
+.banner-slider .slide3 {
+  background-image: url(../img/heat.jpg);
+}
+
+.banner-slider .slide4 {
+  background-image: url(../img/blaze-bailey.jpg);
+}
+
+.banner-slider::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(261.89deg, rgba(25, 24, 24, 0.526) -1.43%, rgba(0, 0, 0, 0.754) 100%);
+  transition: backgroundColor 0.5s;
+  position: absolute;
+}
+
+.banner-slider:hover::after {
+  background: linear-gradient(261.89deg, rgba(44, 37, 37, 0.339) -1.43%, rgba(0, 0, 0, 0.656) 100%);
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  color: #fff;
+}
+
+.arrow.left {
+  left: 10px;
+  z-index: 1;
+}
+
+.arrow.right {
+  right: 10px;
+  z-index: 1;
+}
+
+.banner-controls i {
+  color: #b8b8b8;
+  font-size: 40px;
+  background: rgba(34, 34, 34, 0.341);
+  border-radius: 50%;
+  transition: 0.3s all;
+}
+
+.banner-controls i:hover {
+  color: #f2f2f2;
+  background: #100f0f57;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.headline a {
+  color: var(--text-light);
+  width: 60%;
+}
+
+.headline h1 {
+  font-size: var(--text-size-xxl);
+  font-weight: 600;
+  line-height: calc(var(--text-size-xxl) * 1.2);
+  text-transform: capitalize;
+}
+
+.headline p,
+.playlists p {
+  font-size: var(--text-size-m);
+  line-height: calc(var(--text-size-m) * 1.3);
+  font-family: var(--roboto);
+  margin-top: 24px;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .banner-slider section {
+    height: 65vh;
+  }
+
+  .headline a {
+    width: 80%;
+  }
+
+  .banner-controls i {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner-slider section {
+    height: 50vh;
+  }
+
+  .headline h1 {
+    font-size: var(--text-size-xl);
+    line-height: calc(var(--text-size-xl) * 1.2);
+  }
+
+  .headline p {
+    font-size: var(--text-size-s);
+    line-height: calc(var(--text-size-s) * 1.3);
+  }
+
+  .headline a {
+    width: 100%;
+  }
+}

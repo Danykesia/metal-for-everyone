@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --primary-color: #01060c;
+  --secondary-color: #9588ff;
+  --accent-color: #e0be12;
+  --text-light: #fdfeff;
+  --text-dark: #3d3d3d;
+  --text-gray: #bdbdbd;
+  --text-highlight: #2a1c99;
+  --text-link: #a78b00;
+  --card-gray: #e4e4e4;
+  --card-dark: #05111e;
+  --spotify-color: rgba(28, 208, 94, 0.54);
+  --social-icons: #375b8b;
+  --header-background: linear-gradient(180deg, rgb(6, 14, 29) 0%, #010913 100%);
+  --text-size-xxs: 0.9rem;
+  --text-size-xs: 1.1rem;
+  --text-size-s: 1.2rem;
+  --text-size-m: 1.3rem;
+  --text-size-l: 1.48rem;
+  --text-size-xl: 1.9rem;
+  --text-size-xxl: 2.9rem;
+  --titillium: "Titillium Web", sans-serif;
+  --roboto: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: var(--titillium);
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  padding: 0 80px;
+}
+
+.button-bg {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s;
+  font-family: var(--roboto);
+}
+
+.button-bg:hover {
+  background-color: #f0da14;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--accent-color);
+  transform: translateY(-0.25em);
+}
+
+.button-link {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--text-size-xxs);
+  cursor: pointer;
+  width: fit-content;
+  position: relative;
+}
+
+.texture-background {
+  background-image: url(../img/texture-bg.jpg);
+  background-color: var(--card-dark);
+  padding-bottom: 72px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 820px) {
+  .container {
+    padding: 0 20px;
+  }
+}
