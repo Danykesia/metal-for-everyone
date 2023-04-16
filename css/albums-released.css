@@ -28,7 +28,6 @@
   flex-wrap: nowrap;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
   scroll-behavior: smooth;
   align-items: center;
 }
