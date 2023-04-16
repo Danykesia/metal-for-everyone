@@ -1,17 +1,13 @@
 /* Latest news */
+.latest-news-section, .top-news {
+  margin-top: 52px;
+}
+
 .latest-news-grid {
   margin-top: 25.6px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-}
-
-.latest-news-section h3,
-.top-news-section h3 {
-  color: var(--accent-color);
-  font-size: var(--text-size-xl);
-  margin-top: 52.8px;
-  font-weight: 600;
 }
 
 .card-text-aside {
