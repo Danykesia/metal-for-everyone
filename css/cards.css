@@ -27,7 +27,7 @@
 }
 
 .card-text-aside .date,
-.card-text-below .date {
+.card-text-below-info .date, .post-banner-info .date {
   font-size: var(--text-size-xxs);
 }
 

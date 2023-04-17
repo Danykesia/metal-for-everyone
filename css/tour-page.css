@@ -15,12 +15,22 @@
 }
 
 .post-banner-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   color: var(--text-light);
   position: absolute;
   bottom: 50px;
   margin-left: 40px;
 }
 
-.post-banner-info a {
+.post-banner-info .title {
+  font-size: var(--text-size-xl);
+  line-height: calc(var(--text-size-xl));
+  color: var(--text-light);
+}
+
+.post-banner-info .text {
+  font-size: var(--text-size-s);
   color: var(--text-light);
 }
