@@ -3,6 +3,10 @@
   margin: 30px 0;
 }
 
+.photo-post-section .card-text-inside {
+  width: 25%;
+}
+
 .photo-post-section .card-text-inside:nth-of-type(1) {
   background-image: url(../img/metallica.jpg);
 }
