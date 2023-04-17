@@ -43,7 +43,7 @@
   color: var(--text-gray);
   font-size: var(--text-size-xs);
   font-family: var(--roboto);
-  font-weight: 400;
+  font-weight: 300;
   line-height: calc(var(--text-size-xs) * 1.5);
 }
 
@@ -73,12 +73,12 @@
   display: flex;
 }
 
-.card-text-below-card {
+.card-text-below-content {
   display: flex;
   flex-direction: column;
 }
 
-.card-text-below-card img {
+.card-text-below-content img {
   width: 100%;
 }
 
